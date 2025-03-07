@@ -8,10 +8,10 @@ sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 sock.settimeout(5)  # Set timeout to 5 seconds
 
 
-SERVER_IP = os.getenv("SERVER_IP", "default_ip_here")
-SERVER_PORT = int(os.getenv("SERVER_PORT", "9999"))
+broadcast_ip = os.getenv("SERVER_IP", "")
+server_port = int(os.getenv("SERVER_PORT", ""))
 
-print(f"Connecting to server at {SERVER_IP}:{SERVER_PORT}")
+print(f"Connecting to server at {broadcast_ip}:{server_port}")
 
 message = b"DISCOVER_SERVER"
 

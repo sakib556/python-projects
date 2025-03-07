@@ -4,9 +4,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()  # Load environment variables from .env file
-
-SERVER_IP = os.getenv("SERVER_IP", "default_ip_here")
-SERVER_PORT = int(os.getenv("SERVER_PORT", "9999"))
+SERVER_IP = os.getenv("SERVER_IP", "")
+SERVER_PORT = int(os.getenv("SERVER_PORT", ""))
 
 print(f"Connecting to server at {SERVER_IP}:{SERVER_PORT}")
 
